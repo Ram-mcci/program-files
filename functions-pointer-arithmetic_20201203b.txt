@@ -1,0 +1,37 @@
+﻿/* function-pointers-arithmetic_20201203a.h thurs Dec 03 2020 12:40:00 ramsubbu */
+/*
+
+Module: function-pointers-arithmetic_20201203a.h
+Function:
+Header file for function-pointers-arithmetic_20201203a.h - Function Pointer Example.
+Version:
+ V3.XXa thurs Dec 03 2020 12:40:00 ramsubbu Edit level 01
+
+Copyright notice:
+ This file copyright (C) 2020 by
+ MCCI Corporation
+ 3520 Krums Corners Road
+ Ithaca, NY 14850
+ An unpublished work. All rights reserved.
+
+ This file is proprietary information, and may not be disclosed or
+ copied without the prior permission of MCCI Corporation.
+Author:
+ Rama Subbu M, MCCI December 2020
+Revision history:
+ 1.00A thurs Dec 03 2020 12:40:00 ramsubbu
+ Module created.
+*/
+
+#ifndef _FUNCTION-POINTERS-ARITHMETIC_20201203A_H_ /* prevent multiple includes */
+#define _FUNCTION-POINTERS-ARITHMETIC_20201203A_H_
+
+//DECLARATION
+
+int add (int, int);
+int sub (int, int);
+int mul (int, int);
+int div (int,int);
+int (*func_ptr) (int);
+
+/* end of _FUNCTION-POINTERS-ARITHMETIC_20201203A_H_ */
