@@ -1,0 +1,118 @@
+﻿/* func-ptr-ram_20201202a.c Wed Dec 02 2020 15:30:00 ramsubbu */
+/*
+
+Module: func-ptr-ram_20201202a.c
+Function:
+C program for Function Pointer Example.
+Version:
+ V3.XXa Wed Dec 02 2020 15:30:00 ramsubbu Edit level 01
+
+Copyright notice:
+ This file copyright (C) 2020 by
+ MCCI Corporation
+ 3520 Krums Corners Road
+ Ithaca, NY 14850
+ An unpublished work. All rights reserved.
+
+ This file is proprietary information, and may not be disclosed or
+ copied without the prior permission of MCCI Corporation.
+Author:
+ Rama Subbu M, MCCI December 2020
+Revision history:
+ 1.00A Wed Dec 02 2020 15:30:00 ramsubbu
+ Module created.
+*/
+
+#include <stdio.h>
+#include "func-ptr-ram_20201202a.h"
+
+/****************************************************************************\
+|
+| Manifest constants & typedefs.
+|
+| This is strictly for private types and constants which will not
+| be exported.
+|
+\****************************************************************************/
+
+
+/****************************************************************************\
+|
+| Read-only data.
+|
+| If program is to be ROM-able, these must all be tagged read-only
+| using the ROM storage class; they may be global.
+|
+\****************************************************************************/
+
+
+/****************************************************************************\
+|
+| VARIABLES:
+|
+| If program is to be ROM-able, these must be initialized
+| using the BSS keyword. (This allows for compilers that require
+| every variable to have an initializer.) Note that only those
+| variables owned by this module should be declared here, using the BSS
+| keyword; this allows for linkers that dislike multiple declarations
+| of objects.
+|
+\****************************************************************************/
+
+/*
+Name: main()
+
+Function:
+	main function to start the execution.
+
+Definition:
+	int main (void);
+
+Description:
+	Main function from where the execution of the program starts.
+
+Returns:
+	Returns Zero.
+
+Notes:
+	None
+*/
+
+int main (void)
+	{
+	int choice, num, ret;
+
+	printf ("Enter the choice to perform the below operations:\n 1. Square of a Value\n	\
+	2. Check Odd/Even\n3. Check Prime number\n");
+	scanf ("%d", &choice);
+	printf ("Enter the number\n");
+	scanf ("%d", &num);
+
+	switch (choice)
+		{
+		case 1:
+			func_ptr = square;
+			printf ("Performing Square...");
+		break;
+
+		case 2:
+			func_ptr = even;
+			printf ("Performing Odd/Even Check...");
+		break;
+
+		case 3:
+			func_ptr = prime;
+			printf ("Performing Prime Check...");
+		break;
+
+		default:
+			printf ("Sorry, wrong input!!\n");
+		break;
+		}
+
+	ret = func_ptr (num);
+	printf ("Result: %d", ret);
+
+	return 0;
+	}
+

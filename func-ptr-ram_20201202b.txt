@@ -1,0 +1,37 @@
+﻿/* func-ptr-ram_20201202a.h Wed Dec 02 2020 15:30:00 ramsubbu */
+/*
+
+Module: func-ptr-ram_20201202a.h
+Function:
+Header file for func-ptr-ram_20201202a.c - Function Pointer Example.
+Version:
+ V3.XXa Wed Dec 02 2020 15:30:00 ramsubbu Edit level 01
+
+Copyright notice:
+ This file copyright (C) 2020 by
+ MCCI Corporation
+ 3520 Krums Corners Road
+ Ithaca, NY 14850
+ An unpublished work. All rights reserved.
+
+ This file is proprietary information, and may not be disclosed or
+ copied without the prior permission of MCCI Corporation.
+Author:
+ Rama Subbu M, MCCI December 2020
+Revision history:
+ 1.00A Wed Dec 02 2020 15:30:00 ramsubbu
+ Module created.
+*/
+
+#ifndef _FUNC-PTR-RAM_20201202A_H_ /* prevent multiple includes */
+#define _FUNC-PTR-RAM_20201202A_H_
+
+//DECLARATION
+
+int square (int);
+int prime (int);
+int even  (int);
+
+int (*func_ptr) (int);
+
+/* end of _FUNC-PTR-RAM_20201202A_H_ */
