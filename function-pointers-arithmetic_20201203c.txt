@@ -1,0 +1,75 @@
+﻿#include <stdio.h>
+#include <conio.h>
+int (add) (int,int);
+int (sub) (int,int);
+int (mul) (int,int);
+int (div) (int,int);
+int (*func_ptr) (int, int);
+
+int main ()
+         {
+           int num, ret;
+           char ch;
+           printf ("Enter the choice to perform the below operations:\n 1. Addition\n \
+	                  2. subtraction\n3.division\n 3. multiplication\n4. division\n");
+	   scanf ("%d", &ch);
+           printf ("enter the value");
+           scanf ("%d", &num);
+           switch (ch)
+           {       
+                   case 1:
+                   func_ptr = &add;
+                   printf ("addition of two value is:");
+                   break;
+                   
+                   case 2:
+                   func_ptr = &sub;
+                   printf ("subtraction of two value is:");
+                   break;
+                    
+                   case 3:
+                   func_ptr = &mul;
+                   printf ("multiplication of two value is:");
+                   break;
+
+                   case 4:
+                   func_ptr = &div;
+                   printf ("division of two number is:");
+                   break;
+
+                   default:
+                   printf("The option you have entered is wrong");
+                   break;
+
+                   ret = func_ptr (num, num);
+	           printf ("Result: %d", ret);
+                   return 0;
+
+
+           }
+         }
+                  int (add) (int a, int b)
+                  {
+                          printf ("The addition of two value is %d",a + b);
+                  }
+                  
+                  int (sub) (int a, int b)
+                  {
+                          printf ("The subtraction of two value is %d",a - b);
+                  }
+
+                  int (mul) (int a, int b)
+                  {
+                          printf ("The multiplication of two value is %d",a*b);
+                  }
+
+                  int (div) (int a, int b)
+                  {
+                          printf ("The division of two value is %d",a/b);
+                  }
+         
+
+
+
+
+          
