@@ -1,0 +1,40 @@
+﻿/* array-structure_20201207c.h tue Dec 08 2020 11:00:00 ramasubbu */
+/*
+
+Module: array-structure_20201207a.h 
+Function:
+Header file for array-structure_20201207a.c - Function Pointer Example.
+Version:
+ V3.XXa tue Dec 08 2020 11:00:00 ramasubbu Edit level 01
+
+Copyright notice:
+ This file copyright (C) 2020 by
+ MCCI Corporation
+ 3520 Krums Corners Road
+ Ithaca, NY 14850
+ An unpublished work. All rights reserved.
+
+ This file is proprietary information, and may not be disclosed or
+ copied without the prior permission of MCCI Corporation.
+Author:
+ Rama Subbu M, MCCI December 2020
+Revision history:
+ 1.00A tue Dec 08 2020 11:00:00 ramasubbu
+ Module created.
+*/
+
+#ifndef _ARRAY-STRUCTURE_20201207C_H_/* prevent multiple includes */
+#define _ARRAY-STRUCTURE_20201207C_H_
+ 
+ 
+
+//DECLARATION
+
+struct database
+{
+        char name[100];
+        char aadhar[100];
+        char covidstatus[100];
+};
+
+/* end of _ARRAY-STRUCTURE_20201207A_H_ */
