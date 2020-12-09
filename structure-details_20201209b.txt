@@ -1,0 +1,119 @@
+﻿/* structure-details_20201208a.c wed Dec 09 2020 17:30:00 ramsubbu */
+/*
+
+Module: structure-details_20201208a.c
+Function:
+C program for Function Pointer Example.
+Version:
+ V3.XXa wed Dec 09 2020 17:30:00 ramsubbu Edit level 01
+
+Copyright notice:
+ This file copyright (C) 2020 by
+ MCCI Corporation
+ 3520 Krums Corners Road
+ Ithaca, NY 14850
+ An unpublished work. All rights reserved.
+
+ This file is proprietary information, and may not be disclosed or
+ copied without the prior permission of MCCI Corporation.
+Author:
+ Rama Subbu M, MCCI December 2020
+Revision history:
+ 1.00A wed Dec 09 2020 17:30:00  ramsubbu
+ Module created.
+*/
+
+#include <stdio.h>
+#include "structure-details_20201209a.h"
+
+/****************************************************************************\
+|
+| Manifest constants & typedefs.
+|
+| This is strictly for private types and constants which will not
+| be exported.
+|
+\****************************************************************************/
+
+
+/****************************************************************************\
+|
+| Read-only data.
+|
+| If program is to be ROM-able, these must all be tagged read-only
+| using the ROM storage class; they may be global.
+|
+\****************************************************************************/
+
+
+/****************************************************************************\
+|
+| VARIABLES:
+|
+| If program is to be ROM-able, these must be initialized
+| using the BSS keyword. (This allows for compilers that require
+| every variable to have an initializer.) Note that only those
+| variables owned by this module should be declared here, using the BSS
+| keyword; this allows for linkers that dislike multiple declarations
+| of objects.
+|
+\****************************************************************************/
+
+/*
+Name: main()
+
+Function:
+	main function to start the execution.
+
+Definition:
+	int main (void);
+
+Description:
+	Main function from where the execution of the program starts.
+
+Returns:
+	Returns Zero.
+
+Notes:
+	None
+*/
+
+void main ()
+  {
+  struct details s[5];
+  int i;
+  char positive;
+  char negative;
+  char status[15];
+  printf ("enter the 5 persons details");
+  for (i = 0; i < 5; i++)
+    {
+    printf ("\nEnter the name of the person");
+    scanf ("%s",&s[i].name);
+
+    printf ("\nEnter the aadhar id of the person");
+    scanf ("%s",&s[i].aadhar);
+    
+    printf ("\nEnter the covid status of the person");
+    scanf ("%s",&s[i].covidstatus);
+    }
+  printf ("\npersons record");
+  for (i = 0;i < 5; i++)
+    {
+    printf ("\nName :%s, \nAadharID :%s, \nCovidStatus :%s",s[i].name, s[i].aadhar, s[i].covidstatus);
+    }
+    printf ("\ncovid status:");
+
+    scanf ("%s",status);
+
+  for (i = 0; i < 5; i++)
+    {
+    
+    if (strcmp(s[i].covidstatus , status) == 0)
+      {
+      printf ("\nName :%s, \nAadharID :%s, \nCovidstatus :%s",s[i].name, s[i].aadhar, s[i].covidstatus);
+      }
+      
+    }
+  getch ();
+  }
