@@ -1,0 +1,37 @@
+﻿/* structures-pointers_20201208a.h tue Dec 08 2020 13:30:00 ramasubbu */
+/*
+
+Module: structures-pointers_20201208a.h 
+Function:
+Header file for structures-pointers_20201208a.c - Function Pointer Example.
+Version:
+ V3.XXa tue Dec 08 2020 13:30:00 ramasubbu Edit level 01
+
+Copyright notice:
+ This file copyright (C) 2020 by
+ MCCI Corporation
+ 3520 Krums Corners Road
+ Ithaca, NY 14850
+ An unpublished work. All rights reserved.
+
+ This file is proprietary information, and may not be disclosed or
+ copied without the prior permission of MCCI Corporation.
+Author:
+ Rama Subbu M, MCCI December 2020
+Revision history:
+ 1.00A tue Dec 08 2020 13:30:00 ramasubbu
+ Module created.
+*/
+
+#ifndef _STRUCTURES_POINTERS_20201208A_H_/* prevent multiple includes */
+#define _STRUCTURES_POINTERS_20201208A_H_
+//DECLARATION
+struct database
+{
+        char name[20];
+        char aadhar[20];
+        char covidstatus[15];
+};
+
+#endif
+/* end of _STRUCTURES-POINTERS_20201208A_H_ */
