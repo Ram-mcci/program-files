@@ -1,0 +1,43 @@
+﻿#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+#include "structures-pointers_20201208a.h"
+/*struct database
+
+{
+        char name[20];
+        char aadhar[20];
+        char covidstatus[15];
+};*/
+
+void main ()
+        {
+        struct database *ptr ;
+        struct database person;
+
+        ptr = &person;
+        
+
+        printf ("\nEnter name of the person");
+        scanf ("%s",ptr->name);
+        
+        printf ("\nEnter aadhar id of the person");
+        scanf ("%s",ptr->aadhar);
+
+        printf ("\nEnter the covid status of the person");
+        scanf("%s",ptr->covidstatus);
+
+        printf ("\nStudent record:\n");    
+        printf ("\nName: %s, \nAadharID: %s, \nStatus: %s\n",ptr->name ,ptr->aadhar ,ptr->covidstatus);    
+        getch ();        
+        }
+
+      
+        
+
+
+        
+
+        
+
