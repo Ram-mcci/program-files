@@ -1,11 +1,11 @@
-﻿/* structures-pointers_20201208a.h tue Dec 08 2020 13:30:00 ramasubbu */
+﻿/* structure-details_20201209a.h wed Dec 09 2020 12:40:00 ramsubbu */
 /*
 
-Module: structures-pointers_20201208a.h 
+Module: structure-details_20201209a.h
 Function:
-Header file for structures-pointers_20201208a.c - Function Pointer Example.
+Header file for structure-details_20201209a.h - structure Pointer Example.
 Version:
- V3.XXa tue Dec 08 2020 13:30:00 ramasubbu Edit level 01
+ V3.XXa wed Dec 09 2020 12:40:00 ramsubbu Edit level 01
 
 Copyright notice:
  This file copyright (C) 2020 by
@@ -19,19 +19,19 @@ Copyright notice:
 Author:
  Rama Subbu M, MCCI December 2020
 Revision history:
- 1.00A tue Dec 08 2020 13:30:00 ramasubbu
+ 1.00A wed Dec 09 2020 12:40:00 ramsubbu
  Module created.
 */
 
-#ifndef _STRUCTURES_POINTERS_20201208A_H_/* prevent multiple includes */
-#define _STRUCTURES_POINTERS_20201208A_H_
+#ifndef _STRUCTURE-DETAILS_20201209A_H_ /* prevent multiple includes */
+#define _STRUCTURE-DETAILS_20201209A_H_
+
 //DECLARATION
-struct database
+struct details
 {
         char name[20];
         char aadhar[20];
         char covidstatus[15];
 };
-
 #endif
-/* end of _STRUCTURES-POINTERS_20201208A_H_ */
+/* end of _STRUCTURE-DETAILS_20201209A_H_ */

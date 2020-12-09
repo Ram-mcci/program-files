@@ -1,0 +1,50 @@
+﻿#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include "structure-details_20201209a.h"
+
+/*struct details
+{
+        char name[20];
+        char aadhar[20];
+        char covidstatus[15];
+};*/
+void main ()
+        {
+        struct details s[5];
+        int i;
+        char positive;
+        char negative;
+        char status[15];
+        printf ("enter the 5 persons details");
+        for (i = 0; i < 5; i++)
+          {
+          printf ("\nEnter the name of the person");
+          scanf ("%s",&s[i].name);
+
+          printf ("\nEnter the aadhar id of the person");
+          scanf ("%s",&s[i].aadhar);
+          
+          printf ("\nEnter the covid status of the person");
+          scanf ("%s",&s[i].covidstatus);
+          }
+          printf ("\npersons record");
+        for (i = 0;i < 5; i++)
+          {
+          printf ("\nName :%s, \nAadharID :%s, \nCovidStatus :%s",s[i].name, s[i].aadhar, s[i].covidstatus);
+          }
+          printf ("\ncovid status:");
+
+          scanf ("%s",status);
+
+        for (i = 0; i < 5; i++)
+          {
+          
+          if (strcmp(s[i].covidstatus , status) == 0)
+            {
+            printf ("\nName :%s, \nAadharID :%s, \nCovidstatus :%s",s[i].name, s[i].aadhar, s[i].covidstatus);
+            }
+           
+          }
+        getch ();
+        }
