@@ -1,0 +1,38 @@
+﻿/* read-write_20201210a.h fri Dec 11 2020 12:00:00 ramsubbu */
+/*
+
+Module: read-write_20201210a.h
+Function:
+Header file for read-write_20201210a.h - file handling Example.
+Version:
+ V3.XXa fri Dec 11 2020 12:00:00 ramsubbu Edit level 01
+
+Copyright notice:
+ This file copyright (C) 2020 by
+ MCCI Corporation
+ 3520 Krums Corners Road
+ Ithaca, NY 14850
+ An unpublished work. All rights reserved.
+
+ This file is proprietary information, and may not be disclosed or
+ copied without the prior permission of MCCI Corporation.
+Author:
+ Rama Subbu M, MCCI December 2020
+Revision history:
+ 1.00A fri Dec 11 2020 12:00:00 ramsubbu
+ Module created.
+*/
+
+#ifndef _READ-WRITE_20201210A_H_ /* prevent multiple includes */
+#define _READ-WRITE_20201210A_H_
+
+//DECLARATION
+struct details
+{
+        char name[20];
+        char aadhar[20];
+        char covidstatus[15];
+
+};
+#endif
+/* end of _READ-WRITE_20201210A_H_ */

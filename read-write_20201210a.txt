@@ -1,0 +1,72 @@
+﻿#include <stdio.h>
+#include <conio.h>
+#include "read-write_20201210a.h"
+
+/*struct details
+{
+        char name[20];
+        char aadhar[20];
+        char covidstatus[15];
+
+};*/
+void write (struct details s[5]);
+void read ();
+void main ()
+{
+    struct details s[5];
+   
+    int i;
+    printf ("enter the 5 persons details");
+    for (i = 0; i < 5; i++)
+    {
+    printf ("\nEnter the name of the person");
+    scanf ("%s",&s[i].name);
+
+    printf ("\nEnter the aadhar id of the person");
+    scanf ("%s",&s[i].aadhar);
+    
+    printf ("\nEnter the covid status of the person");
+    scanf ("%s",&s[i].covidstatus);
+    
+    }
+    write (s);
+    read ();
+}
+ 
+
+ void write (struct details s[5])
+ {
+  FILE *fptr;
+  fptr = fopen ("e:/C-Practise-Source/Functions/structure-details_20201210.txt", "w");
+  int i;
+  for (i = 0;i < 5; i++)
+    {
+    fprintf ( fptr,"%s\n %s\n %s\n",s[i].name, s[i].aadhar, s[i].covidstatus);
+    //printf ( "check \n\nName :%s, \nAadharID :%s, \nCovidStatus :%s",s.name, s.aadhar, s.covidstatus);
+    
+    }
+    fclose (fptr);
+ }
+ 
+ void read ()
+ {
+  FILE *fptr;
+  fptr = fopen ("e:/C-Practise-Source/Functions/structure-details_20201210.txt", "r");   
+  struct details a; 
+  int i;
+  
+     for (i = 0; i < 5; i++)
+     {
+     fgets (a.name, 20, fptr ) ;
+     printf ("\nName :%s",a.name);
+     fgets (a.aadhar, 35, fptr ) ;
+     printf ( "\nAadharID :%s",a.aadhar);
+     fgets (a.covidstatus, 15, fptr );
+     printf ( "\nCovidstatus :%s",a.covidstatus);
+     }
+    /*{
+    printf ( "check \n\nName :%s, \nAadharID :%s, \nCovidStatus :%s",a.name, a.aadhar, a.covidstatus);
+    }*/
+
+fclose(fptr);
+ }
